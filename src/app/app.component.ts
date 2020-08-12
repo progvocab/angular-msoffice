@@ -1,10 +1,21 @@
-import { Component, VERSION } from '@angular/core';
+// Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo.
+
+/*
+  This file defines the root component of the application. 
+*/
+
+/// <reference path="../typings/index.d.ts" />
+
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+    selector: 'sc-app',
+    template: `
+    <div>        
+        <div class='container'>
+            <router-outlet></router-outlet>
+        </div>
+     </div>
+     `
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
-}
+export class AppComponent { }
